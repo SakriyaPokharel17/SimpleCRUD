@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add student</title>
+</head>
+<body>
+<form th:action="@{/save}" th:object="${student}" th:method="post">
+    <input type="hidden" th:field="*{std_id}">
+    Firstname:<input type="text" th:field="*{firstName}" placeholder="Firstname" required><br>
+    Lastname: <input type="text" th:field="*{lastName}" placeholder="Lastname" required>
+    Password: <input type="password" th:field="*{password}" placeholder="Password" required>
+    <input type="submit" value="submit">
+</form>
+
+
+</body>
+</html>
